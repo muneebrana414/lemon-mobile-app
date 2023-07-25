@@ -6,17 +6,24 @@ import AppFooter from './components/AppFooter';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-       <AppHeader />
-       <AppFooter />
-      <StatusBar style="auto" />
+    <>
+      <View style={styles.header}>
+        <AppHeader />
+      </View>
+      <View style={styles.footer}>
+        <AppFooter />
     </View>
+    <StatusBar style="auto" />
+  </>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  header: {
     flex: 1,
+    backgroundColor: '#495E57'
+  },
+  footer: {
     backgroundColor: '#495E57'
   },
 });

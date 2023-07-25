@@ -3,12 +3,14 @@ import { StyleSheet, View } from 'react-native';
 
 import AppHeader from './components/AppHeader';
 import AppFooter from './components/AppFooter';
+import WelcomeScreen from './components/WelcomeScreen';
 
 export default function App() {
   return (
     <>
       <View style={styles.header}>
         <AppHeader />
+        <WelcomeScreen screenStyle={styles.footer} />
       </View>
       <View style={styles.footer}>
         <AppFooter />
@@ -25,5 +27,5 @@ const styles = StyleSheet.create({
   },
   footer: {
     backgroundColor: '#495E57'
-  },
+  }
 });

@@ -4,13 +4,15 @@ import { StyleSheet, View } from 'react-native';
 import AppHeader from './components/AppHeader';
 import AppFooter from './components/AppFooter';
 import WelcomeScreen from './components/WelcomeScreen';
+import MenuItems from './components/MenuItems';
 
 export default function App() {
+  let showMenu = false
   return (
     <>
       <View style={styles.header}>
         <AppHeader />
-        <WelcomeScreen screenStyle={styles.footer} />
+        {showMenu ? <MenuItems /> : <WelcomeScreen />}
       </View>
       <View style={styles.footer}>
         <AppFooter />

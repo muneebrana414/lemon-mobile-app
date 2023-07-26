@@ -12,12 +12,13 @@ export default function AppFooter() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#F4CE14',
+    backgroundColor: '#EE9972',
     marginBottom: 10,
   },
   footer: {
     fontSize: 15,
     color: 'black',
     textAlign: 'center',
+    fontStyle: 'italic',
   },
 });

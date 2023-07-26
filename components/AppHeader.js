@@ -13,7 +13,7 @@ export default function AppHeader() {
 const styles = StyleSheet.create({
   container: {
     flex: 0.2,
-    backgroundColor: '#F4CE14'
+    backgroundColor: '#EE9972'
   },
   text: {
     fontSize: 30,

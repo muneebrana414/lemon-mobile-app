@@ -7,7 +7,7 @@ import WelcomeScreen from './components/WelcomeScreen';
 import MenuItems from './components/MenuItems';
 
 export default function App() {
-  let showMenu = false
+  let showMenu = true
   return (
     <>
       <View style={styles.header}>
@@ -25,9 +25,9 @@ export default function App() {
 const styles = StyleSheet.create({
   header: {
     flex: 1,
-    backgroundColor: '#495E57'
+    backgroundColor: '#333333'
   },
   footer: {
-    backgroundColor: '#495E57'
+    backgroundColor: '#333333'
   }
 });

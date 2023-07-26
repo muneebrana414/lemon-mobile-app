@@ -5,14 +5,17 @@ import AppHeader from './components/AppHeader';
 import AppFooter from './components/AppFooter';
 import WelcomeScreen from './components/WelcomeScreen';
 import MenuItems from './components/MenuItems';
+import FeedbackForm from './components/FeedbackForm';
 
 export default function App() {
-  let showMenu = true
+
   return (
     <>
       <View style={styles.header}>
         <AppHeader />
-        {showMenu ? <MenuItems /> : <WelcomeScreen />}
+        {/* <WelcomeScreen />
+        <MenuItems /> */}
+        <FeedbackForm />
       </View>
       <View style={styles.footer}>
         <AppFooter />
@@ -25,7 +28,7 @@ export default function App() {
 const styles = StyleSheet.create({
   header: {
     flex: 1,
-    backgroundColor: '#333333'
+    backgroundColor: '#495E57'
   },
   footer: {
     backgroundColor: '#333333'

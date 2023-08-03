@@ -3,9 +3,10 @@ import { StyleSheet, View } from 'react-native';
 
 import AppHeader from './components/AppHeader';
 import AppFooter from './components/AppFooter';
-import WelcomeScreen from './components/WelcomeScreen';
-import MenuItems from './components/MenuItems';
-import FeedbackForm from './components/FeedbackForm';
+// import WelcomeScreen from './components/WelcomeScreen';
+// import MenuItems from './components/MenuItems';
+// import FeedbackForm from './components/FeedbackForm';
+import LoginScreen from './components/LoginScreen';
 
 export default function App() {
 
@@ -15,7 +16,8 @@ export default function App() {
         <AppHeader />
         {/* <WelcomeScreen />
         <MenuItems /> */}
-        <FeedbackForm />
+        {/* <FeedbackForm /> */}
+        <LoginScreen />
       </View>
       <View style={styles.footer}>
         <AppFooter />

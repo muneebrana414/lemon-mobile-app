@@ -14,8 +14,8 @@ export default function App() {
     <>
       <View style={styles.header}>
         <AppHeader />
-        {/* <WelcomeScreen />
-        <MenuItems /> */}
+        {/* <WelcomeScreen /> */}
+        {/* <MenuItems /> */}
         {/* <FeedbackForm /> */}
         <LoginScreen />
       </View>

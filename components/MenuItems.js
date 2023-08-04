@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, SectionList, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, SectionList, StyleSheet, Pressable } from 'react-native';
 
 const menuItemsToDisplay = [
   {
@@ -55,6 +55,8 @@ const Item = ({ name, price }) => (
 const Separator = () => <View style={menuStyles.separator} />;
 
 const MenuItems = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
   const renderItem = ({ item }) => <Item name={item.name} price={item.price} />;
 
   const renderSectionHeader = ({ section: { title } }) => (
@@ -65,13 +67,31 @@ const MenuItems = () => {
 
   return (
     <View style={menuStyles.container}>
-      <SectionList
-        keyExtractor={(item, index) => item + index}
-        sections={menuItemsToDisplay}
-        renderItem={renderItem}
-        renderSectionHeader={renderSectionHeader}
-        ItemSeparatorComponent={Separator}
-      />
+      {!showMenu && (
+        <Text style={menuStyles.infoSection}>
+          Little Lemon is a charming neighborhood bistro that serves simple food
+          and classic cocktails in a lively but casual environment. View our
+          menu to explore our cuisine with daily specials!
+        </Text>
+      )}
+      <Pressable
+       style={menuStyles.button}
+       onPress={() => {
+        setShowMenu(!showMenu);
+       }}>
+        <Text style={menuStyles.buttonText}>
+         {showMenu ? 'Home' : 'View Menu'}
+        </Text>
+      </Pressable>
+      {showMenu && (
+        <SectionList
+          keyExtractor={(item, index) => item + index}
+          sections={menuItemsToDisplay}
+          renderItem={renderItem}
+          renderSectionHeader={renderSectionHeader}
+          ItemSeparatorComponent={Separator}
+        />
+      )}
     </View>
   );
 };
@@ -102,7 +122,30 @@ const menuStyles = StyleSheet.create({
   separator: {
     borderBottomWidth: 1,
     borderColor: '#EDEFEE',
-  }
+  },
+  button: {
+    fontSize: 22,
+    padding: 10,
+    marginVertical: 8,
+    margin: 40,
+    backgroundColor: '#EDEFEE',
+    borderColor: '#EDEFEE',
+    borderWidth: 2,
+    borderRadius: 12
+  },
+  buttonText: {
+    color: '#333333',
+    textAlign: 'center',
+    fontSize: 32,
+  },
+  infoSection: {
+    fontSize: 24,
+    padding: 20,
+    marginVertical: 8,
+    color: '#EDEFEE',
+    textAlign: 'center',
+    backgroundColor: '#495E57',
+  },
 });
 
 export default MenuItems;

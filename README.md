@@ -2,6 +2,15 @@
 
 Welcome to **lemon-mobile-app**! This mobile app is built using React Native and Expo CLI.
 
+## ScreenShots
+![image](https://github.com/muneebrana414/lemon-mobile-app/assets/36512513/51978d46-2242-4e23-8ae8-865981912a29)
+![image](https://github.com/muneebrana414/lemon-mobile-app/assets/36512513/a72c6e11-f27f-4767-8332-9de76b92b837)
+![image](https://github.com/muneebrana414/lemon-mobile-app/assets/36512513/b61fe7fb-de23-4d89-8036-d310cdd8aa15)
+![image](https://github.com/muneebrana414/lemon-mobile-app/assets/36512513/b2020d3e-f699-483b-ac02-4db82e1ff3b6)
+
+
+
+
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/muneebrana414/lemon-mobile-app.git`

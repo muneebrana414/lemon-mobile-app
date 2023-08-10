@@ -1,4 +1,4 @@
-import { Text, ScrollView, View, Image, StyleSheet, Pressable } from 'react-native';
+import { Text, ScrollView, View, Image, StyleSheet /*, Pressable */ } from 'react-native';
 
 export default function WelcomeScreen({ navigation }) {
   return (
@@ -19,10 +19,10 @@ export default function WelcomeScreen({ navigation }) {
         and classic cocktails in a lively but casual environment. We would love
         to hear your experience with us!
       </Text>
-      <View style={styles.buttonContainer}>
+      {/* <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={() => navigation.navigate('Menu')}><Text style={styles.buttonText}>View Menu</Text></Pressable>
         <Pressable style={styles.button} onPress={() => navigation.navigate('Login')}><Text style={styles.buttonText}>Log In</Text></Pressable>
-      </View>
+      </View> */}
     </ScrollView>
   );
 }
